@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SPARTIFIED</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <header class="glass-header">
+    <div class="container nav">
+      <div class="nav-left">
+        <a href="#" class="logo-link">
+          <img src="img/logo.png" alt="Spartified Logo" class="logo-img">
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="#slider" class="nav-link-item">Home</a>
+        <a href="#portfolio" class="nav-link-item">Portfolio</a>
+        <a href="#products" class="nav-link-item">Solutions</a>
+        <a href="#customers" class="nav-link-item">Customers</a>
+        <a href="#blog" class="nav-link-item">Insights</a>
+      </nav>
+      <div class="nav-right">
+        <button class="btn btn-neon">Get Started</button>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="slider" class="slider-section">
+      <div class="slider-wrapper" id="sliderWrapper">
+        
+        <div class="slide" data-index="0">
+          <img src="https://plus.unsplash.com/premium_vector-1755643641433-bae49f9db5c8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvcml6b250YWwlMjBsaW5lJTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D" class="slide-bg-img" alt="Futuristic Network">
+          <div class="container slide-content slide-grid">
+            
+            <div class="slide-visual">
+                <img src="img/ai1.jpg" alt="AI Insights Visual" class="slide-vector-img">
+            </div>
+
+            <div class="slide-content-col">
+                <span class="badge-neon">AI</span>
+                <h1 class="slide-title">Insight <span class="text-gradient">AI</span></h1>
+                <p class="slide-desc">Insight AI empowers leaders with intelligent executive dashboards that turn complex data into clear, actionable insights. Powered by cutting-edge AI, it uncovers hidden trends, detects anomalies, and reveals opportunities—so you can make smarter decisions, faster.</p>
+                <button class="btn btn-neon">Explore</button>
+            </div>
+          </div>
+          <div class="slide-overlay"></div>
+        </div>
+
+        <div class="slide" data-index="1">
+          <img src="https://plus.unsplash.com/premium_vector-1755643641433-bae49f9db5c8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvcml6b250YWwlMjBsaW5lJTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D" class="slide-bg-img" alt="Cyberpunk City">
+          <div class="container slide-content slide-grid">
+            
+            <div class="slide-visual">
+                <img src="img/5g_2.jpg" alt="5G API Visual" class="slide-vector-img">
+            </div>
+
+            <div class="slide-content-col">
+                <span class="badge-neon">5G Monetisation</span>
+                <h1 class="slide-title">Want to <span class="text-gradient">Monetize 5G</span>?</h1>
+                <p class="slide-desc">Telco APIs as the Growth Engine for 5G Monetisation
+                With our API Enabler - The API Orchestration Platform - operators can finally justify their 5G SA investment by delivering unique, differentiated, and monetisable use cases.</p>
+                <button class="btn btn-neon">Explore</button>
+            </div>
+          </div>
+          <div class="slide-overlay"></div>
+        </div>
+
+        <div class="slide" data-index="2">
+          <img src="https://plus.unsplash.com/premium_vector-1755643641433-bae49f9db5c8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvcml6b250YWwlMjBsaW5lJTIwYmFja2dyb3VuZHxlbnwwfDB8MHx8fDA%3D" class="slide-bg-img" alt="AI Brain">
+          <div class="container slide-content slide-grid">
+            
+            <div class="slide-visual">
+                <img src="img/agents.jpg" alt="AI Agent Visual" class="slide-vector-img">
+            </div>
+
+            <div class="slide-content-col">
+                <span class="badge-neon">AI Agents</span>
+                <h1 class="slide-title"><span class="text-gradient">Agent</span> as a service</h1>
+                <p class="slide-desc">Welcome to Spar-AI. Your AI assistant to automate task, delivering insights to optimise operations and elevate customer experience. Hire Spar, Mine your data and Monetize - delivering value</p>
+                <button class="btn btn-neon">Explore</button>
+            </div>
+          </div>
+          <div class="slide-overlay"></div>
+        </div>
+
+      </div>
+      
+      <div class="slider-nav">
+        <div class="dot active" onclick="scrollToSlide(0)"></div>
+        <div class="dot" onclick="scrollToSlide(1)"></div>
+        <div class="dot" onclick="scrollToSlide(2)"></div>
+        
+      </div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Product Portfolio</h2>
+          <p class="section-subtitle" style="max-width: 800px; margin: 0 auto;">
+            Spartified, delivers cutting-edge telecom solutions that enhance customer experiences and reduce costs. 
+            Operating globally, the company helps clients streamline services and stay competitive in the fast-evolving telecommunications industry.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          
+          <div class="glass-card product-card">
+            <div class="card-img-top">
+                <img src="img/core-net.png" alt="Core Network Servers">
+            </div>
+            <div class="card-body">
+                <div class="card-glow"></div>
+                <h3>CORE NETWORK</h3>
+                <p>Next-gen packet core solutions designed for high availability and low latency.</p>
+                <a href="#">Learn more &rarr;</a>
+            </div>
+          </div>
+
+          <div class="glass-card product-card">
+            <div class="card-img-top">
+                <img src="img/e-sim.png" alt="eSIM Mobile">
+            </div>
+            <div class="card-body">
+                <div class="card-glow"></div>
+                <h3>eSIM ROAMING</h3>
+                <p>Seamless digital onboarding and instant connectivity for global travelers.</p>
+                <a href="#">Learn more &rarr;</a>
+            </div>
+          </div>
+
+          <div class="glass-card product-card">
+            <div class="card-img-top">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="Global Roaming">
+            </div>
+            <div class="card-body">
+                <div class="card-glow"></div>
+                <h3>ROAMING</h3>
+                <p>Robust interconnect agreements and steering for optimal coverage worldwide.</p>
+                <a href="#">Learn more &rarr;</a>
+            </div>
+          </div>
+
+          <div class="glass-card product-card">
+            <div class="card-img-top">
+                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800&auto=format&fit=crop" alt="Cyber Security">
+            </div>
+            <div class="card-body">
+                <div class="card-glow"></div>
+                <h3>FRAUD & SECURITY</h3>
+                <p>Real-time threat detection to prevent revenue leakage and signaling attacks.</p>
+                <a href="#">Learn more &rarr;</a>
+            </div>
+          </div>
+
+          <div class="glass-card product-card">
+            <div class="card-img-top">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop" alt="AI Neural Net">
+            </div>
+            <div class="card-body">
+                <div class="card-glow"></div>
+                <h3>AI SOLUTIONS</h3>
+                <p>Predictive analytics and automated network optimization driven by machine learning.</p>
+                <a href="#">Learn more &rarr;</a>
+            </div>
+          </div>
+
+          <div class="glass-card product-card">
+            <div class="card-img-top">
+                <img src="https://plus.unsplash.com/premium_photo-1661963727462-edd27f1123a5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8NWd8ZW58MHx8MHx8fDA%3D" alt="5G Speed">
+            </div>
+            <div class="card-body">
+                <div class="card-glow"></div>
+                <h3>5G MONETIZATION</h3>
+                <p>Unlock new revenue streams with slicing, edge computing, and enterprise private networks.</p>
+                <a href="#">Learn more &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <div class="glass-panel two-col">
+          <div class="panel-content">
+            <h2 class="section-title">Next Gen <span class="text-gradient">Spartified</span></h2>
+            <p>A global software house delivering and integrating proprietary Software products underpinned on 3 core principles.</p>
+            <ul class="feature-list">
+              <li><span class="feature-icon">➪</span><span class="feature-text">Exceptional Value Proposition</span></li>
+              <li><span class="feature-icon">➪</span><span class="feature-text">Uncompromising Quality Assurance</span></li>
+              <li><span class="feature-icon">➪</span><span class="feature-text">Optimized Experience Design</span></li>
+            </ul>
+            <button class="btn btn-outline">Read Documentation</button>
+          </div>
+          <div class="panel-visual">
+            <div class="hologram-circle">
+              <img src="img/Quality.png" 
+                   alt="Center graphic" 
+                   class="hologram-image">
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="customers" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Valued Customers</h2>
+          <p class="section-subtitle">Trusted by leading Tier-1 Operators and Fortune 500 companies.</p>
+        </div>
+        <div class="glass-card client-showcase">
+          <img src="img/client.png" alt="Our Clients" class="client-hero-img">
+          <div class="client-stats">
+            <div class="stat-box">
+              <span class="stat-num">50M+</span>
+              <span class="stat-label">eSIMs Activated</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">120+</span>
+              <span class="stat-label">Global Partners</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">0%</span>
+              <span class="stat-label">Fraud Liability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Latest from the Blog</h2>
+          <p class="section-subtitle">Insights into the future of connectivity.</p>
+        </div>
+
+        <div class="blog-grid">
+            <article class="glass-card blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Analytics">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-date">January 16, 2025</div>
+                    <h3 class="blog-title">eSIM Opportunities to Create Ancillary Revenues: Unlocking New Revenue Streams for Businesses</h3>
+                    <a href="#" class="blog-link">Read Article &rarr;</a>
+                </div>
+            </article>
+
+            <article class="glass-card blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=800&auto=format&fit=crop" alt="Network Node">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-date">January 10, 2025</div>
+                    <h3 class="blog-title">Unlocking Enterprise Connectivity: How GTPProxy Revolutionizes Mobile Network Management</h3>
+                    <a href="#" class="blog-link">Read Article &rarr;</a>
+                </div>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="glass-card cta-box-detailed">
+          <div class="cta-header-center">
+            <h2 class="cta-title">Ready for the future?</h2>
+            <p class="cta-text">
+              Share a few details and the Spartified team can recommend the right mix of eSIM, VOIP,
+              fraud and network solutions for your use case.
+            </p>
+          </div>
+
+          <form class="glass-form-detailed">
+            <div class="form-grid-detailed">
+              <div class="form-field">
+                <label for="name">Full name</label>
+                <input id="name" type="text" placeholder="Your name" />
+              </div>
+              <div class="form-field">
+                <label for="email">Work email</label>
+                <input id="email" type="email" placeholder="you@company.com" />
+              </div>
+              <div class="form-field">
+                <label for="company">Company</label>
+                <input id="company" type="text" placeholder="Your company" />
+              </div>
+              <div class="form-field">
+                <label for="role">Role</label>
+                <input id="role" type="text" placeholder="e.g. Network lead" />
+              </div>
+            </div>
+
+            <div class="form-field full-width">
+              <label for="interest">What are you interested in?</label>
+              <select id="interest">
+                <option>eSIM &amp; Roaming</option>
+                <option>Core Network</option>
+                <option>Fraud & Security</option>
+                <option>AI Solutions</option>
+                <option>5G Monetization</option>
+                <option>Multiple solutions</option>
+              </select>
+            </div>
+
+            <div class="form-field full-width">
+              <label for="message">Tell us a bit about your project</label>
+              <textarea id="message" placeholder="Use cases, timelines, regions…"></textarea>
+            </div>
+
+            <div class="form-action-center">
+              <button class="btn btn-neon btn-wide" type="submit">
+                Submit &amp; Request Demo
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass-footer">
+    <div class="newsletter-signup">
+      <div class="container footer-newsletter-row">
+        <div class="newsletter-text-col">
+          <h2 class="newsletter-title">Want to receive news and updates?</h2>
+          <p class="newsletter-subtitle">Stay ahead with Spartified! Sign up for exclusive updates, insights, and offers delivered to your inbox.</p>
+        </div>
+        <div class="newsletter-form-col">
+          <form class="footer-form">
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Stay in the loop</button>
+          </form>
+          <p class="newsletter-legal">
+            By clicking 'Submit' you confirm that you are happy to us to store and use your
+            information to contact you. Find out more about GDPR and our privacy policy 
+            <a href="#" class="privacy-link">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-main-content">
+      <div class="footer-branding-social">
+        <a href="#" class="logo-link">
+          <img src="img/logo.png" alt="Spartified Logo" class="logo-img footer-logo">
+        </a>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links-grid">
+        <div class="footer-links-col">
+          <h4>Core Network Solutions</h4>
+          <a href="#">SMSC Platform</a>
+          <a href="#">USSD Gateway</a>
+          <a href="#">GTP Proxy</a>
+          <a href="#">eSIM Subscription Management</a>
+          <a href="#">OTA Manager Solution</a>
+          <a href="#">Test Automation</a>
+          <h4 class="h4-service-gap">Services</h4>
+          <a href="#">Managed Services</a>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4>AI Solutions</h4>
+          <a href="#">Insight AI</a>
+          <a href="#">AI Agent</a>
+          <a href="#">AI Billing</a>
+          <h4 class="h4-service-gap">MVNO Solutions</h4>
+          <a href="#">Cloud PBX</a>
+          <a href="#">Mobile Selfcare App</a>
+          <a href="#">FLEXIeSIM</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Roaming</h4>
+          <a href="#">Steering Analytics</a>
+          <a href="#">Welcome SMS</a>
+          <a href="#">IR.21 Management</a>
+          <h4 class="h4-service-gap">Testing</h4>
+          <a href="#">Active Testing</a>
+          <a href="#">Test Call Generator</a>
+          <h4 class="h4-service-gap">Fraud and Security</h4>
+          <a href="#">FraudProtect</a>
+          <a href="#">SMS Firewall</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>About Us</h4>
+          <a href="#">Blog</a>
+          <a href="#">Events</a>
+          <a href="#">Press Releases</a>
+          <h4 class="h4-service-gap"></h4>
+          <a href="#">Affiliate</a>
+          <a href="#">Partnership</a>
+          <a href="#">Reach Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-inner">
+        <div class="footer-copy">
+          Copyright © 2025 | SPARTIFIED | All Rights Reserved
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Home</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sliderWrapper = document.getElementById('sliderWrapper');
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const totalSlides = slides.length;
+      let currentIndex = 1; // Start with the first actual slide (index 1)
+      let autoSlideInterval;
+
+      // Function to update active dot
+      function updateDots(index) {
+        dots.forEach(dot => dot.classList.remove('active'));
+        // The real index is always 1 less than the wrapper index (due to the clone at index 0)
+        const realIndex = (index - 1 + totalSlides) % totalSlides;
+        if(dots[realIndex]) {
+            dots[realIndex].classList.add('active'); 
+        }
+      }
+
+      // Function to handle the actual slide transition
+      function goToSlide(index, smooth = true) {
+        // Stop the auto slide when going to a specific slide (e.g., dot click)
+        if (smooth) stopAutoSlide(); 
+        
+        const slideWidth = sliderWrapper.offsetWidth;
+        const newPosition = index * slideWidth;
+        
+        sliderWrapper.scrollTo({
+          left: newPosition,
+          behavior: smooth ? 'smooth' : 'auto'
+        });
+        
+        currentIndex = index;
+        updateDots(index);
+
+        // Resume auto slide after a small delay if it was a manual click
+        if (smooth) startAutoSlide();
+      }
+
+      // 1. DUPLICATE SLIDES FOR SEAMLESS LOOPING (Clone the first and last slides)
+      const firstSlideClone = slides[0].cloneNode(true);
+      const lastSlideClone = slides[totalSlides - 1].cloneNode(true);
+      
+      // Add clones to the wrapper
+      sliderWrapper.appendChild(firstSlideClone); // Add first slide clone at the end
+      sliderWrapper.insertBefore(lastSlideClone, slides[0]); // Add last slide clone at the beginning
+      
+      // 2. INITIAL ADJUSTMENT: Jump to the first actual slide (index 1)
+      // We use the 'load' event to override browser scroll restoration *after* everything is rendered.
+      window.addEventListener('load', () => {
+        const slideWidth = slides[0].offsetWidth;
+        
+        // Instant jump to the first actual slide (index 1)
+        sliderWrapper.scrollTo({
+          left: slideWidth,
+          behavior: 'auto'
+        });
+        currentIndex = 1; 
+        updateDots(1); 
+        startAutoSlide();
+      });
+
+
+      // 3. TRANSITION LOGIC (Handle the jump back from clones)
+      let isScrolling;
+      sliderWrapper.addEventListener('scroll', () => {
+        // Debounce the scroll event
+        window.clearTimeout(isScrolling);
+
+        isScrolling = setTimeout(() => {
+            const scrollLeft = sliderWrapper.scrollLeft;
+            const slideWidth = slides[0].offsetWidth; 
+
+            // Calculate the current visible index
+            const currentScrollIndex = Math.round(scrollLeft / slideWidth);
+
+            // A. If we are on the first clone (index 0)
+            if (currentScrollIndex === 0) {
+              // Jump immediately to the last real slide (index: totalSlides)
+              currentIndex = totalSlides;
+              goToSlide(currentIndex, false); 
+              return;
+            }
+
+            // B. If we are on the last clone (index: totalSlides + 1)
+            if (currentScrollIndex === totalSlides + 1) {
+              // Jump immediately to the first real slide (index 1)
+              currentIndex = 1;
+              goToSlide(currentIndex, false); 
+              return;
+            }
+
+            // Update dots normally for real slides (index 1 to totalSlides)
+            if (currentIndex !== currentScrollIndex) {
+                 currentIndex = currentScrollIndex;
+                 updateDots(currentIndex);
+            }
+
+        }, 50); 
+      });
+
+      // 4. DOT CLICK HANDLER (Adjusted for clones)
+      window.scrollToSlide = function(dotIndex) {
+          // Slide index needs to be +1 because of the clone at the beginning
+          goToSlide(dotIndex + 1);
+      }
+
+      // 5. AUTO-SLIDE MECHANISM 
+      function nextSlide() {
+        goToSlide(currentIndex + 1, true);
+      }
+      
+      function startAutoSlide() {
+          if (autoSlideInterval) clearInterval(autoSlideInterval);
+          autoSlideInterval = setInterval(nextSlide, 5000); // 5 seconds transition
+      }
+
+      function stopAutoSlide() {
+          clearInterval(autoSlideInterval);
+      }
+      
+      // Initial call to start the auto slide after the 'load' event fires
+      // Note: We removed the initial setTimeout call here as the 'load' event handles it.
+      
+      // Add pause/resume on hover
+      sliderWrapper.addEventListener('mouseenter', stopAutoSlide);
+      sliderWrapper.addEventListener('mouseleave', startAutoSlide);
+
+    });
+  </script>
+
+</body>
+</html>
