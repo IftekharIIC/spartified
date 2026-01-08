@@ -242,7 +242,7 @@
         </div>
       </div>
     </section>
-
+    
     <section id="blog" class="section">
       <div class="container">
         <div class="section-header">
@@ -552,9 +552,6 @@
       function stopAutoSlide() {
           clearInterval(autoSlideInterval);
       }
-      
-      // Initial call to start the auto slide after the 'load' event fires
-      // Note: We removed the initial setTimeout call here as the 'load' event handles it.
       
       // Add pause/resume on hover
       sliderWrapper.addEventListener('mouseenter', stopAutoSlide);

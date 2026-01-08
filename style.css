@@ -22,11 +22,11 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif; 
   background-color: var(--bg-dark);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 a { text-decoration: none; color: inherit; transition: 0.3s; }
@@ -58,7 +58,7 @@ ul { list-style: none; }
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem; 
 }
 
 .text-gradient {
@@ -113,7 +113,7 @@ ul { list-style: none; }
   background: transparent;
   border: 1px solid var(--primary);
   color: var(--primary);
-  border-radius: 8px; /* Slightly squarer button for this section */
+  border-radius: 8px; 
 }
 .btn-outline:hover {
   background: var(--primary);
@@ -143,7 +143,37 @@ ul { list-style: none; }
   height: 80px;
 }
 
-.logo-img { height: 40px; display: block; }
+/* --- LOGO ANIMATED ON HOVER --- */
+.logo-img { 
+  height: 70px; 
+  width: 230px; 
+  display: block; 
+  content: ""; 
+  
+  /* Gradient set to 200% width for movement */
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+  background-size: 200% auto;
+  transition: 0.5s ease;
+
+  -webkit-mask-image: url('img/logo.png');
+  mask-image: url('img/logo.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+/* Trigger animation on hover */
+.logo-img:hover {
+  animation: logoGradientMove 2s linear infinite;
+  filter: drop-shadow(0 0 8px var(--primary));
+}
+
+@keyframes logoGradientMove {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
 
 .nav-links {
   display: flex;
@@ -153,15 +183,14 @@ ul { list-style: none; }
   font-size: 0.95rem;
   font-weight: 500;
   opacity: 0.8;
-  position: relative; /* For underline animation */
-  padding-bottom: 5px; /* Space for the underline */
+  position: relative; 
+  padding-bottom: 5px; 
 }
 .nav-links a:hover {
   opacity: 1;
   color: var(--primary);
 }
 
-/* 1. ANIMATED UNDERLINE EFFECT */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -178,11 +207,10 @@ ul { list-style: none; }
     width: 100%;
 }
 
-
 .nav-right { display: flex; gap: 1rem; align-items: center; }
-.nav-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; }
+.nav-toggle { background: none; border: none; color: #fff; font-size: 1.5rem; display: none;} 
 
-/* --- 6. SLIDER (UPDATED) --- */
+/* --- 6. SLIDER --- */
 .slider-section {
   position: relative;
   width: 100%;
@@ -222,24 +250,22 @@ ul { list-style: none; }
   filter: brightness(0.4) contrast(1.2); 
 }
 
-/* 2. SLIDER GRID STRUCTURE */
 .slide-content {
   position: relative;
   z-index: 2;
-  width: 100%; /* Ensure container takes full width */
+  width: 100%; 
   animation: fadeUp 1s ease forwards;
 }
 
 .slide-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Visual column (left), Content column (right) */
+    grid-template-columns: 1fr 1.2fr;
     gap: 3rem;
     align-items: center;
-    text-align: left; /* Change default alignment to left */
+    text-align: left; 
 }
 
 .slide-visual {
-    /* Visual container styling (e.g., ensuring image fits) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,15 +275,11 @@ ul { list-style: none; }
 .slide-vector-img {
     max-width: 100%;
     height: auto;
-    max-height: 350px; /* Control image size */
+    max-height: 350px; 
     object-fit: contain;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 242, 234, 0.5); /* Neon glow effect for the vector */
+    box-shadow: 0 0 20px rgba(0, 242, 234, 0.5); 
     filter: saturate(1.2) brightness(1.1);
-}
-
-.slide-content-col {
-    /* Content column styling */
 }
 
 .badge-neon {
@@ -286,7 +308,6 @@ ul { list-style: none; }
   color: #e2e8f0;
   margin-bottom: 2rem;
   max-width: 600px;
-  /* Removed auto margins as text is left-aligned */
   text-shadow: 0 2px 5px rgba(0,0,0,0.8);
 }
 
@@ -368,7 +389,7 @@ ul { list-style: none; }
 .product-card a { color: var(--text-main); font-weight: 600; font-size: 0.9rem; }
 .product-card a:hover { color: var(--primary); }
 
-/* --- 8. SOLUTIONS PANEL (UPDATED) --- */
+/* --- 8. SOLUTIONS PANEL --- */
 .glass-panel {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
@@ -385,12 +406,10 @@ ul { list-style: none; }
   align-items: center;
 }
 
-/* Enforce Rajdhani for the text-heavy panel content */
 .panel-content {
     font-family: 'Rajdhani', monospace, sans-serif; 
 }
 
-/* Feature List Text Styling */
 .feature-list {
   list-style: none;
   padding: 0;
@@ -404,71 +423,44 @@ ul { list-style: none; }
     align-items: center;
 }
 
-/* Icon separation and styling */
 .feature-icon {
     font-size: 1.5rem; 
     margin-right: 0.5rem; 
     filter: drop-shadow(0 0 4px var(--primary)); 
 }
 
-/* The actual text needing the gradient and Rajdhani font */
 .feature-text {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Rajdhani', monospace, sans-serif; 
-    
-    /* Applying the NEON GRADIENT effect */
     background: linear-gradient(90deg, var(--secondary), var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    
-    /* Applying a subtle GLOW */
     text-shadow: 0 0 4px rgba(0, 242, 234, 0.5);
 }
 
 
 /* --- ANIMATION KEYFRAMES --- */
-/* Slow, continuous rotation for the outer circle/ring */
 @keyframes rotate-hologram {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-/* Keyframes for text rotation (reverse direction to keep text readable on rotating ring) */
 @keyframes rotate-text-labels {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
 }
-
 
 @keyframes text-pulse {
-    0% {
-        opacity: 0.9;
-        text-shadow: 0 0 5px rgba(0, 242, 234, 0.6);
-    }
-    50% {
-        opacity: 1;
-        text-shadow: 0 0 10px rgba(0, 242, 234, 1);
-    }
-    100% {
-        opacity: 0.9;
-        text-shadow: 0 0 5px rgba(0, 242, 234, 0.6);
-    }
+    0% { opacity: 0.9; text-shadow: 0 0 5px rgba(0, 242, 234, 0.6); }
+    50% { opacity: 1; text-shadow: 0 0 10px rgba(0, 242, 234, 1); }
+    100% { opacity: 0.9; text-shadow: 0 0 5px rgba(0, 242, 234, 0.6); }
 }
 
 
-/* --- Hologram Visual Styling (Updated for Rotation and Triangles) --- */
 .hologram-circle {
   width: 300px;
   height: 300px;
@@ -481,16 +473,13 @@ ul { list-style: none; }
   justify-content: center;
   box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), inset 0 0 8px var(--secondary);
   background: rgba(0, 242, 234, 0.05);
-
-  /* Apply slow rotation animation to the main ring */
   animation: rotate-hologram 40s linear infinite;
-  overflow: hidden; /* Ensure image stays within the circle boundary */
+  overflow: hidden; 
 }
 
-/* Triangle pseudo-elements for aesthetic effect */
 .hologram-circle::before,
 .hologram-circle::after {
-    content: '\25B3'; /* Unicode for black up-pointing triangle */
+    content: '\25B3'; 
     position: absolute;
     font-size: 1.2rem;
     color: var(--primary);
@@ -510,34 +499,25 @@ ul { list-style: none; }
     transform: rotate(-150deg);
 }
 
-/* --- CORRECTED: Image Styling --- */
 .hologram-image {
-    /* Corrected width and height to fit the 300px container */
     width: 2500px; 
     height: 300px;
-    border-radius: 50%; /* Make the image circular */
+    border-radius: 50%; 
     object-fit: cover;
     position: relative; 
     z-index: 5;
-    /* Optional: Add a subtle inner glow/shadow to the image */
     box-shadow: 0 0 15px rgba(124, 58, 237, 0.5); 
 }
 
-
-/* --- CIRCULAR TEXT STYLING (The Rotating Feature) --- */
 .hologram-text-circle {
     position: absolute;
-    /* Increased size to 350px for proper radial alignment on the ring */
     width: 350px; 
     height: 350px;
-    /* Centering the 350px circle over the 300px parent */
-    top: -8.33%; /* Calculated as: (350-300)/2 / 300 * 100 */
+    top: -8.33%; 
     left: -8.33%;
     border-radius: 50%;
     pointer-events: none;
     z-index: 5; 
-
-    /* APPLY CONTINUOUS ROTATION HERE (Parent rotation for orbital effect) */
     animation: rotate-text-labels 40s linear infinite reverse; 
 }
 
@@ -548,19 +528,13 @@ ul { list-style: none; }
     text-transform: uppercase;
     font-family: 'Rajdhani', monospace, sans-serif; 
     letter-spacing: 2px;
-    
-    /* Apply neon gradient to the words */
     background: linear-gradient(90deg, #fff, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    
-    /* Apply subtle glow/pulse to the text */
     text-shadow: 0 0 5px rgba(153, 85, 255, 0.8);
     animation: text-pulse 3s ease-in-out infinite alternate;
-
-    /* Crucial: Center the word for accurate rotation/positioning */
     transform-origin: 50% 50%; 
 }
 
@@ -617,7 +591,6 @@ ul { list-style: none; }
 .cta-title { font-size: 2rem; margin-bottom: 0.5rem; }
 .cta-text { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
 
-/* Detailed Form Grid */
 .glass-form-detailed {
   max-width: 800px;
   margin: 0 auto;
@@ -652,13 +625,11 @@ ul { list-style: none; }
 .full-width { grid-column: 1 / -1; }
 .form-action-center { text-align: center; margin-top: 1rem; }
 
-/* --- 12. UPDATED FOOTER STYLING --- */
-
+/* --- 12. FOOTER STYLING --- */
 .glass-footer {
   background: #020205; 
 }
 
-/* Newsletter Section */
 .newsletter-signup {
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
@@ -731,7 +702,6 @@ ul { list-style: none; }
   text-decoration: underline;
 }
 
-/* Main Footer Content */
 .footer-main-content {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -739,16 +709,27 @@ ul { list-style: none; }
   padding: 3rem 1.5rem 2rem;
 }
 
-/* Logo and Social Block */
 .footer-branding-social {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
+
+/* FOOTER LOGO ALSO UPDATED WITH ANIMATION */
 .footer-branding-social .logo-img {
   height: 35px; 
+  width: 130px;
   margin-bottom: 0;
-  filter: brightness(1.2);
+  content: ""; 
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
+  background-size: 200% auto;
+  -webkit-mask-image: url('img/logo.png');
+  mask-image: url('img/logo.png');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: left;
 }
 
 .footer-social {
@@ -794,12 +775,10 @@ ul { list-style: none; }
   color: var(--primary); 
   transform: translateX(3px); 
 }
-/* Utility for spacing between topic groups */
 .h4-service-gap {
   margin-top: 1.5rem;
 }
 
-/* Footer Bottom Bar */
 .footer-bottom-bar {
   border-top: 1px solid #1e293b;
   padding: 1rem 0;
@@ -822,43 +801,64 @@ ul { list-style: none; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes pulse { 0% { transform: scale(0.9); opacity: 0.7; } 100% { transform: scale(1.1); opacity: 1; } }
 
+/* --- 13. RESPONSIVENESS AND MEDIA QUERIES --- */
 @media (max-width: 1024px) {
-    .footer-links-grid { grid-template-columns: repeat(2, 1fr); }
-    .footer-main-content { grid-template-columns: 1fr; }
-    
-    /* Responsive adjustment for slider grid */
+    .nav-links, .nav-right .btn-neon { 
+        display: none; 
+    }
+    .nav-toggle { 
+        display: block; 
+    }
+    .container { 
+        padding: 0 1rem; 
+    }
     .slide-grid {
-        grid-template-columns: 1fr; /* Single column layout */
-        text-align: center; /* Center content on smaller screens */
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 1rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
-    .slide-content-col {
-        order: 2; /* Put text content below visual on mobile */
-    }
-    .slide-visual {
-        order: 1; /* Put visual first on mobile */
-    }
+    .slide-content-col { order: 2; }
+    .slide-visual { order: 1; }
     .slide-title { font-size: 3rem; }
     .slide-desc { margin-left: auto; margin-right: auto; }
+
+    .two-col { grid-template-columns: 1fr; }
+    .glass-panel { padding: 2rem; }
+    
+    .footer-newsletter-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .footer-form input, .footer-form button { width: 100%; margin-right: 0; }
+    .footer-form { flex-wrap: wrap; width: 100%; }
+    .footer-links-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-main-content { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-  .nav-links, .nav-right .btn-outline { display: none; }
-  .nav-toggle { display: block; }
-  .slide-title { font-size: 2.5rem; }
-  .two-col { grid-template-columns: 1fr; }
-  
-  /* Hide the entire hologram visual on mobile to save space */
-  .hologram-circle { display: none; }
-  
-  .blog-grid { grid-template-columns: 1fr; }
-  .form-grid-detailed { grid-template-columns: 1fr; }
-  
-  .footer-newsletter-row { flex-direction: column; align-items: flex-start; }
-  .newsletter-title, .newsletter-subtitle { text-align: left; }
-  .newsletter-form-col { width: 100%; }
-  .footer-links-grid { grid-template-columns: 1fr; }
-  .footer-bottom-inner { flex-direction: column; text-align: center; gap: 0.5rem; }
-  .footer-legal-links a { margin: 0 0.5rem; }
+    .section { padding: 2.5rem 0; }
+    .section-title { font-size: 2rem; }
+    .slide-title { font-size: 2.2rem; }
+    .slide-desc { font-size: 1rem; }
+    .portfolio-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .card-img-top { height: 150px; }
+    .hologram-circle { display: none; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .client-stats { flex-wrap: wrap; margin-top: -60px; padding: 1.5rem 1rem; }
+    .stat-box { flex: 1 1 50%; margin-bottom: 0.5rem; }
+    .stat-num { font-size: 2rem; }
+    .form-grid-detailed { grid-template-columns: 1fr; }
+    .cta-box-detailed { padding: 1.5rem; }
+    .footer-links-grid { grid-template-columns: 1fr; }
+    .footer-bottom-inner { flex-direction: column; text-align: center; gap: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 0.5rem; }
+    .nav { height: 70px; }
+    .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+    .slide-title { font-size: 1.75rem; }
+    .slide-desc { font-size: 0.9rem; }
+    .badge-neon { margin-bottom: 1rem; }
+    .footer-form input { border-radius: 8px; margin-bottom: 0.5rem; }
+    .footer-form button { border-radius: 8px; }
 }
